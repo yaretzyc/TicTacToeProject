@@ -23,17 +23,17 @@ body {
 
 .box {
     background-color: white;
-    font-size: 10px; 
+    font-size: 40px; 
     aspect-ratio: 1;
     justify-content: center;
 
-    /* font-size for when the x or o go in the boxes */
   }
 
-  .box:hover{
+  .cells:hover{
       background-color: black;
 
   }
-  p{
+
+  #players {
       font-size: 30px;
   }
