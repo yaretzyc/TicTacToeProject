@@ -1,13 +1,15 @@
 const container = document.querySelector('#bigBox');
 // console.log(container);
 const squareDivs = document.querySelectorAll('[cell]');
-console.log(squareDivs);
+// console.log(squareDivs);
 
 const restartButton = document.querySelector('#restart');
 // console.log(restartButton);
 
 const winner = document.querySelector('#player-won-lost-tied');
-console.log(winner);
+// console.log(winner);
+
+
 
 
 let nextPlayer = 'X'
@@ -71,7 +73,12 @@ function playerStatus(){
             { 
             console.log('winner');
             return true;
-
+        }
+        if (squareDivs[x].innerText === 'O' &&
+        squareDivs[y].innerText === 'O' &&
+        squareDivs[z].innerText === 'O')
+        {
+            return true;
         }
     }
     return false;
