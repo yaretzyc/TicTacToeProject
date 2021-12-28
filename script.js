@@ -9,33 +9,31 @@ const restartButton = document.querySelector('#restart');
 const winner = document.querySelector('#player-won-lost-tied');
 console.log(winner);
 
-//
-// function clickedDiv(){
-//     for (let i= 0; i<9; i++){
-//     squareDivs[i].onclick = function () {
-//         console.log('cell index ' + [i]);
-//     }
-//     }
-// }
-// clickedDiv();
 
+let nextPlayer = 'X'
 
 function clickedDiv(){
     for (let i= 0; i<9; i++){
-    squareDivs[i].onclick = function (){
-        let newPlayer = 'X';
-        squareDivs[i].classList.remove('cells');  
-        
-        squareDivs[i].querySelector('p').innerHTML = newPlayer;
-    }
-
-
+        squareDivs[i].onclick = function (){
+            let newPlayer = nextPlayer;
+            squareDivs[i].classList.remove('cells');  
+            squareDivs[i].querySelector('p').innerHTML = newPlayer;
+               
+            if (nextPlayer == 'X'){
+                nextPlayer = 'O'
+            } else {
+                nextPlayer = 'X'
+            }
+        }
     }
 }
 clickedDiv();
 
-//NEED TO alternate between x and o
+//
+
+
 //set the winning combos
 //set when the games ends and alert the player
 //game ends when the player acheives the winning combo
 // score is reflected
+
