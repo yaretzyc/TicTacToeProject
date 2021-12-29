@@ -2,7 +2,8 @@ const container = document.querySelector('#bigBox');
 // console.log(container);
 const squareDivs = document.querySelectorAll('[cell]');
 // console.log(squareDivs);
-
+// const buttonReset = document.querySelector('button').onclick;
+// console.log(buttonReset);
 /*
 
 Function clickedDiv() was created for whenever a square is clicked in the grid container it would show hover ability and set it to X or O. Then you player won't be able to click it again to change and once clicked can't hover over. 
@@ -43,7 +44,20 @@ function gameEnds(player) was created to alert if either player X or O is the wi
 */
 
 function gameEnds(player){
-    return alert('the winner is Player ' + player);
+    alert('the winner is Player ' + player);
+    resetBoard();
+}
+/*
+
+function resetBoard() will reset the board back to empty divs after a player wins
+
+*/
+
+function resetBoard(){
+    for (let i= 0; i < 9; i++){
+        squareDivs[i].querySelector('p').innerHTML = '';
+}
+return clickedDiv();
 }
 
 let winningComb = [
@@ -62,7 +76,7 @@ let winningComb = [
 
 /* 
 
-function playerStatus() grabs each winningComb array and assigns each index to x, y, and z. Then the 
+function playerStatus() grabs each winningComb array and assigns each index to x, y, and z. Then the squareDivs where each div is checked to see whether it has all X's or all O's in that array.
 
 */
 
@@ -80,6 +94,7 @@ function playerStatus(){
             console.log('Player X is the winner');
             return true;
         }
+        
         if (squareDivs[x].innerText === 'O' &&
         squareDivs[y].innerText === 'O' &&
         squareDivs[z].innerText === 'O')
@@ -88,6 +103,7 @@ function playerStatus(){
             return true;
         }
     }
+
     return false;
 }
 
