@@ -2,27 +2,28 @@
 
 body {
     font-family: 'Rock 3D', sans-serif;
+    color: yellow;
     text-align: center;
     font-weight: 600;
     font-size: 60px;
     padding: 50px;
-    background-color: lightcyan;
+    background-color: black;
 
 }
 
 .divBox {
-    background-color: black;
+    background-color: white;
     display: grid;
     grid: auto/auto auto auto;
-    grid-gap: 20px; 
-    width: 500px;
-    height: 500px; 
+    grid-gap: 10px; 
+    width: 400px;
+    height: 400px; 
     margin: 0 auto;
 
 }
 
 .box {
-    background-color: white;
+    background-color: black;
     font-size: 40px; 
     aspect-ratio: 1;
     justify-content: center;
@@ -30,10 +31,13 @@ body {
   }
 
   .cells:hover{
-      background-color: black;
+      background-color: white;
 
   }
 
-  #players {
+  .playerScore {
       font-size: 30px;
   }
+button{
+    margin-bottom: 50px;
+}
