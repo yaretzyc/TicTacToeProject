@@ -2,8 +2,7 @@ const container = document.querySelector('#bigBox');
 // console.log(container);
 const squareDivs = document.querySelectorAll('[cell]');
 // console.log(squareDivs);
-// const buttonReset = document.querySelector('button').onclick;
-// console.log(buttonReset);
+
 /*
 
 Function clickedDiv() was created for whenever a square is clicked in the grid container it would show hover ability and set it to X or O. Then you player won't be able to click it again to change and once clicked can't hover over. 
@@ -25,7 +24,8 @@ function clickedDiv(){
             squareDivs[i].querySelector('p').innerHTML = newPlayer;
 
             if (playerStatus()) return gameEnds(newPlayer);
-               
+            // if (tiedGame()) return gameEnds('no one');
+
             if (nextPlayer == 'X'){
                 nextPlayer = 'O'
             } else {
@@ -44,8 +44,10 @@ function gameEnds(player) was created to alert if either player X or O is the wi
 */
 
 function gameEnds(player){
-    alert('the winner is Player ' + player);
+    alert('Player ' + player);
+    nine = 0;
     resetBoard();
+
 }
 /*
 
@@ -83,6 +85,9 @@ function playerStatus() grabs each winningComb array and assigns each index to x
 
 */
 
+let nine = 0
+
+
 function playerStatus(){
 
     for (let i = 0; i < winningComb.length; i++){
@@ -106,8 +111,14 @@ function playerStatus(){
             return true;
         }
     }
+        // console.log('this');
+        // const that = 'this'
+
+        nine ++
+        console.log(nine)
+        if(nine >= 9){
+            gameEnds('game is tied');
+        }
+
     return false;
 }
-
-
-
