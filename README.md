@@ -1,6 +1,6 @@
 # Tic Tac Toe Project 1
 
-Game of Tic Tac Toe. Player X is the first to play and then Player O. 
+Game of Tic Tac Toe. Player X is the first to play and then Player O at the start of the game, then the next player is the player who wins.  
 
 Technologies Used: HTML, CSS, JS
 
@@ -31,3 +31,4 @@ A few considerations to improve the functionality of the game:
 - Be able to restart the current game but the tally stays
 - Audio plays when clicking the square and after a player wins
 - An option for each player to choose their symbols
+- Know which player is next
