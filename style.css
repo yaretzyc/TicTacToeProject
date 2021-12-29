@@ -30,14 +30,16 @@ body {
 
   }
 
-  .cells:hover{
-      background-color: white;
+.cells:hover{
+    background-color: white;
 
   }
 
-  .playerScore {
-      font-size: 30px;
+
+.playerScore {
+    font-size: 30px;
   }
+
 button{
     margin-bottom: 50px;
 }

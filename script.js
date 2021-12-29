@@ -49,16 +49,19 @@ function gameEnds(player){
 }
 /*
 
-function resetBoard() will reset the board back to empty divs after a player wins
+function resetBoard() will reset the board back to empty divs after a player wins and add the cells to apply the hover effect
 
 */
 
 function resetBoard(){
     for (let i= 0; i < 9; i++){
         squareDivs[i].querySelector('p').innerHTML = '';
+        squareDivs[i].classList.add('cells');
 }
+
 return clickedDiv();
 }
+
 
 let winningComb = [
     //rows
@@ -103,7 +106,6 @@ function playerStatus(){
             return true;
         }
     }
-
     return false;
 }
 
